@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Exhibitions</title>
+      <link rel="stylesheet" href="style.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+      <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+      <style>
+       
+
+@import url('https://fonts.googleapis.com/css2?family=Chau+Philomene+One&family=Lato:ital,wght@1,300&family=Lobster&family=Mochiy+Pop+P+One&family=Open+Sans:ital,wght@0,400;1,300&family=Poppins&family=Roboto:ital,wght@1,100&family=Supermercado+One&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  fon
+}
+body{
+  background: #f2f2f2;
+}
+nav{
+  background: #171c24;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  height: 65px;
+  width: 100%;
+  padding: 0 100px;
+  position: fixed;
+}
+nav .logo{
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+nav .nav-items{
+  display: flex;
+  flex: 1;
+  padding: 0 0 0 40px;
+}
+nav .nav-items li{
+  list-style: none;
+  padding: 0 15px;
+}
+nav .nav-items li a{
+  color: #fff;
+  font-size: 15px;
+  font-weight: 450;
+  color: whitesmoke;
+  text-decoration: none;
+}
+nav .nav-items li a:hover{
+  color: red;
+}
+nav form{
+  display: flex;
+  height: 40px;
+  padding: 2px;
+  background: #1e232b;
+  min-width: 18%!important;
+  border-radius: 2px;
+  border: 1px solid rgba(155,155,155,0.2);
+}
+nav form .search-data{
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  color: #fff;
+  font-size: 17px;
+  border: none;
+  font-weight: 500;
+  background: none;
+}
+nav form button{
+  padding: 0 15px;
+  color: #fff;
+  font-size: 17px;
+  background: #ff3d00;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+nav form button:hover{
+  background: #e63600;
+}
+nav .menu-icon,
+nav .cancel-icon,
+nav .search-icon{
+  width: 40px;
+  text-align: center;
+  margin: 0 50px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+.nav-items .bi{
+  color: red;
+  font-size: 18px;
+}
+
+
+nav .menu-icon span,
+nav .cancel-icon,
+nav .search-icon{
+  display: none;
+}
+.hheader{
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(7, 7, 7, 0.84),rgba(7, 7, 7, 0.88)),url('https://www.marketingdonut.co.uk/sites/default/files/exhibiting_227681290_0.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*.hheader-part2{
+  height: 40vh;
+  width: 100%;
+  background-image: url('https://www.convergenceindia.org/colocated-2022.html');
+  background-size: cover;
+  background-repeat: no-repeat;
+}*/
+.hheader-part2{
+  height: auto;
+  width: 100%;
+  background-color: white;
+  padding-bottom: 50px;
+}
+.exh{
+  color: red;
+}
+
+.logo img{
+
+  height: 30%;
+  width: 30%;
+}
+
+
+
+.hheader-part2 h2{
+  padding-top: 20px;
+  padding-left: 150px;
+  font-family: 'Poppins', sans-serif;
+  
+}
+.hheader-part2 p{
+  padding-top: 30px;
+  padding-left: 150px;
+  font-family: 'Poppins', sans-serif;
+  
+}
+.hheader-part3{
+  height: auto;
+  width: 100%;
+ /* background-color: gray;*/
+  display: flex;
+  flex-direction: row;
+  
+
+}
+/*.fixedbg{
+
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvhEl9tSR6N9hl09WVeD0TNPwr2yxfT0phSg&usqp=CAU');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: fixed;
+}*/
+.about{
+  height: auto;
+  width: 50%;
+  padding-left: 150px;
+
+  
+
+}
+.about h2{
+  padding-left: 20px;
+  padding-top: 20px;
+}
+.about ul{
+  padding-top: 15px;
+  font-family: 'Poppins', sans-serif;
+  
+}
+
+.fix-bg{
+background-image: url('https://media.istockphoto.com/photos/art-exibition-lot-3d-visualization-picture-id1131101048?k=20&m=1131101048&s=612x612&w=0&h=HHf2dQZakZE-gMKYAsj496sddwOPQxI-vwI7IwZyhUw=');
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+height: auto;
+width: 50%;
+margin-left: 30px;
+
+}
+.fix-bg img{
+
+  height:100%;
+  width: 100%;
+  padding-top: 30px;
+  padding-right: 10px;
+
+}
+.hheader-part4 h2{
+padding-top: 30px;
+font-family: 'Poppins', sans-serif;
+
+}
+.businessu{
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.bub{
+
+  border-right: 2px solid grey;
+}
+.bub img{
+  height: 100px;
+  width: 180px;
+  float: left;
+  padding-right:35px;
+}
+
+/*.bub h1{
+  padding-right: 20px;
+  padding-left: 30px;
+  padding-top: 10px;
+  font-size: 25px;
+  
+}*/
+.hheader-part5{
+  margin-top: 40px;
+  height: auto;
+  width: 100%;
+  background-color: black;
+
+}
+
+.businessu P{
+  color: white;
+  padding-left: 20px;
+  font-family: 'Poppins', sans-serif;
+  
+}
+.businessu h1{
+  padding-left: 20px;
+  font-size: 25px;
+  font-family: 'Poppins', sans-serif;
+  
+}
+.hheader-part6{
+  height: 90vh;
+  width: 100%;
+  background-image: url('https://media.istockphoto.com/photos/visitors-among-the-stands-of-companies-picture-id887680492?k=20&m=887680492&s=612x612&w=0&h=iatS8mQCX5TdTk7B7uDkccHgM184Z0DWaFt0jaJIL-U=');
+ background-image-filter: blur(5px);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.hh{
+
+  height: 500px;
+  width: 750px;
+
+}
+.hh img{
+  height: 100%;
+  width: 100%;
+}
+.row1{
+  height: auto;
+  width: 100%;
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.row1 img{
+  width: 100%;
+  height: 100%;
+}
+.row{
+   height: auto;
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+
+}
+.row img{
+  width: 100%;
+  height: 100%;
+}
+.col-sm{
+  height: 200px;
+  width: 260px;
+}
+.col-sm img{
+  height: 100%;
+  width: 100%;
+}
+.hheader-part7{
+
+  margin-top: 50px;
+
+  height: auto;
+  width: 100%;
+  
+}
+.lasthead{
+  height: auto;
+  width: 100%;
+  display: flex;
+  margin-top: 5px;
+  background-color: black;
+}
+
+.ql{
+  margin-left: 90px;
+}
+
+.ql ul  li{
+list-style: none;
+text-decoration: none;
+color: white;
+
+
+
+
+}
+.ql ul  li a{
+  text-decoration: none;
+  color: white;
+
+}
+.ld{
+  display: flex;
+
+}
+.git{
+  margin-left: 90px;
+}
+.mp{
+  margin-top: 20px;
+  height: 400px;
+  width: 700px;
+  margin-left: 90px;
+}
+#return-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    border-radius: 35px;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top i {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    left: 16px;
+    top: 13px;
+    font-size: 19px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#return-to-top:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+#return-to-top:hover i {
+    color: #fff;
+    top: 5px;
+}
+
+
+
+
+
+
+
+@media (max-width: 1245px) {
+  nav{
+    padding: 0 50px;
+  }
+}
+@media (max-width: 1140px){
+  nav{
+    padding: 0px;
+  }
+  nav .logo{
+    flex: 2;
+    text-align: center;
+  }
+  nav .nav-items{
+    position: fixed;
+    z-index: 99;
+    top: 70px;
+    width: 100%;
+    left: -100%;
+    height: 100%;
+    padding: 10px 50px 0 50px;
+    text-align: center;
+    background: #14181f;
+    display: inline-block;
+    transition: left 0.3s ease;
+  }
+  nav .nav-items.active{
+    left: 0px;
+  }
+  nav .nav-items li{
+    line-height: 40px;
+    margin: 30px 0;
+  }
+  nav .nav-items li a{
+    font-size: 20px;
+  }
+  nav form{
+    position: absolute;
+    top: 80px;
+    right: 50px;
+    opacity: 0;
+    pointer-events: none;
+    transition: top 0.3s ease, opacity 0.1s ease;
+  }
+  nav form.active{
+    top: 95px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  nav form:before{
+    position: absolute;
+    content: "";
+    top: -13px;
+    right: 0px;
+    width: 0;
+    height: 0;
+    z-index: -1;
+    border: 10px solid transparent;
+    border-bottom-color: #1e232b;
+    margin: -20px 0 0;
+  }
+  nav form:after{
+    position: absolute;
+    content: '';
+    height: 60px;
+    padding: 2px;
+    background: #1e232b;
+    border-radius: 2px;
+    min-width: calc(100% + 20px);
+    z-index: -2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  nav .menu-icon{
+    display: block;
+  }
+  nav .search-icon,
+  nav .menu-icon span{
+    display: block;
+  }
+  nav .menu-icon span.hide,
+  nav .search-icon.hide{
+    display: none;
+  }
+  nav .cancel-icon.show{
+    display: block;
+  }
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+.content header{
+  font-size: 30px;
+  font-weight: 700;
+}
+.content .text{
+  font-size: 30px;
+  font-weight: 700;
+}
+.space{
+  margin: 10px 0;
+}
+nav .logo.space{
+  color: red;
+  padding: 0 5px 0 0;
+}
+@media (max-width: 980px){
+  nav .menu-icon,
+  nav .cancel-icon,
+  nav .search-icon{
+    margin: 0 20px;
+  }
+  nav form{
+    right: 30px;
+  }
+  .banner-img img{
+  height: 250px;
+  width: 340px;
+}
+.logo{
+  display: none;
+}
+.hheader-part2 h2{
+ 
+  padding-left: 10px;
+  font-family: 'Poppins', sans-serif;
+  
+}
+.hheader-part2 p{
+  
+  padding-left: 10px;
+  font-family: 'Poppins', sans-serif;
+  
+}
+.hheader-part3{
+  background-image: url('https://media.istockphoto.com/photos/art-exibition-lot-3d-visualization-picture-id1131101048?k=20&m=1131101048&s=612x612&w=0&h=HHf2dQZakZE-gMKYAsj496sddwOPQxI-vwI7IwZyhUw=');
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+.about{
+  width: 90%;
+  height: auto;
+  background-color: white;
+  border: 1px solid white;
+  padding-right: 50px;
+  padding-left: 0px;
+  margin-left:30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.fix-bg{
+  width: 0px;
+  height: 0px;
+  display: none;
+}
+.businessu{
+flex-wrap: wrap;
+/*margin-top: 40px;
+padding-top: 40px;*/
+
+}
+
+.bub{
+  margin-top: 20px;
+}
+.hh{
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.row1{
+  width: 100%;
+  flex-wrap: wrap;
+}
+.row1 img{
+  padding-top: 20px;
+}
+.row{
+  width: 100%;
+  flex-wrap: wrap;
+}
+.row img{
+padding-top: 10px;
+}
+.lasthead{
+  flex-wrap: wrap;
+}
+.mp{
+  padding-right: 20px;
+}
+
+
+}
+@media (max-width: 350px){
+  nav .menu-icon,
+  nav .cancel-icon,
+  nav .search-icon{
+    margin: 0 10px;
+    font-size: 16px;
+  }
+
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.content header{
+  font-size: 30px;
+  font-weight: 700;
+}
+.content .text{
+  font-size: 30px;
+  font-weight: 700;
+}
+.content .space{
+  margin: 10px 0;
+}
+.banner-img img{
+  height: 250px;
+  width: 300px;
+}
+}
+
+</style>
+
+
+   </head>
+   <body>
+      <nav>
+         <div class="menu-icon">
+            <span class="fas fa-bars"></span>
+         </div>
+         <div class="logo">
+            <img src="images/logo.jpg">
+         </div>
+         <div class="nav-items">
+           
+          <li><a href="#"><i class="bi bi-house-door-fill"></i></a></li>
+            <li><a href="#">EXPOS</a></li>
+            <li><a href="#">CONFRENCES</a></li>
+            <li><a href="#">AWARDS</a></li>
+            <li><a href="#">PRESS</a></li>
+            <li><a href="#">CARRER</a></li>
+            <li><a href="#">ENQUIRY</a></li>
+            <li><a href="#">QUICK PAY</a></li>
+            <li><a href="#">CONTACTS US</a></li>
+         </div>
+          <div class="search-icon">
+            <span class="fas fa-search"></span>
+         </div> 
+         <div class="cancel-icon">
+            <span class="fas fa-times"></span>
+         </div>
+         <!-- <form action="#">
+            <input type="search" class="search-data" placeholder="Search" required>
+            <button type="submit" class="fas fa-search"></button>
+         </form> -->
+      </nav>
+    <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+
+   <section class="hheader">
+   
+   <div class="banner-img">
+    <img src="https://www.exhibitionsindia.com/images/ei-banner-logo.png">
+     
+   </div>
+
+     
+   </section>
+   
+   <section class="hheader-part2" data-aos="zoom-in">
+    <h2>Welcome to <span class="exh">Exhibitions India Group</span></h2>
+    <p>Established in 1987, the Exhibitions India Group (EIG) is a leading trade promotion organisation that acts as an interface between government, industry, media, academia, etc. The Group creates opportunities for trade promotion, networking, encouraging investments, joint ventures and technology transfers through the platform of international exhibitions and conferences.</p>
+
+<p>EIG has organised over 100 international trade shows since inception, including the creation of some of the longest running and most impactful exhibitions in India. Today, EIG organises the largest technology and infrastructure expo in the country – Convergence India (including Internet of Things, Mobile India, EmbeddedTech, Fintech & Digital Gaming) and Smart Cities India (including Buildings, CleanTech, Smart Energy, Transport & Water). The Convergence India expo is at the forefront of India’s digital revolution, while the Smart Cities India expo is a reflection of India’s emerging modernization and development landscape.</p>
+
+<p>Exhibitions India Group comprises of five strategic business units dealing in exhibitions & conferences, international sales representation, publishing, stand design & fabrication and digital marketing solutions.</p>
+<h2>Mission</h2>
+<p>To maintain leadership through honest and transparent practices by providing world-class services to our customers; to develop their businesses worldwide through exhibitions, conferences, trade missions, market-entry strategies, etc.</p>
+<h2>Vision</h2>
+<p>To play an integral role in India’s growth, maintain leadership as a trade promotion organisation, and to set standards in excellence.</p>
+     
+   </section>
+   <section class="hheader-part3">
+    <div class="about" data-aos="fade-right">
+      <h2 style="margin-top: 20px ;">Who <span class="exh">We Are</span></h2>
+      <ul>
+        <li>EIG is headquartered in New Delhi, with branches in Bangalore, Chennai and Mumbai.</li><br>
+        <li>With 100 team members across India, and a database of over 400,000 Indian and overseas companies across several verticals, EIG has the ability to operate across the country and across industries.</li><br>
+        <li>EIG is the only trade fair organiser in India to have ISO 9001:2015 (for quality), and ISO 14001:2015 (for environment management system) certifications, as well as OHSAS 18001:2007 (for health & safety) certification.</li><br>
+        <li>EIG is also a member of UFI – The Global Association of Exhibitions Industry, which establishes and emphasises our commitment to quality.</li><br>
+        <li>We are the proud recipient of the ‘Outstanding Company to Promote Indo-US trade,’ awarded by the Indo-American Chamber of Commerce at the 11th Indo-US Economic Summit (2015).</li>
+
+        
+
+      </ul>
+      
+    </div>
+    <div class="fix-bg">
+    <!--   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvhEl9tSR6N9hl09WVeD0TNPwr2yxfT0phSg&usqp=CAU"> -->
+      
+    </div>
+     
+   </section>
+
+   <section class="hheader-part4">
+    <h2 style="text-align: center;">EIG:<span class="exh">Business Units</span></h2>
+    <div class="businessu">
+      <div class="bub">
+       <a href=""> <img src="images/logo.jpg"></a>
+        <!-- <h1>Exhibitions India Group</h1> -->
+      </div>
+      <div class="bub">
+        <img src="images/comnet logo.jpg">
+        <!-- <h1>Comnet Exhibitions</h1> -->
+      </div>
+      <div class="bub">
+        <img src="images/AutoX-Logo.jpg">
+        <!-- <h1>AutoX</h1> -->
+       
+      </div>
+      <div class="bub">
+        <img src="images/comnet design.png">
+        <!-- <h1>Comnet Designs</h1> -->
+      </div>
+      <div class="bub">
+        <img src="images/cg.jpg">
+       <!--  <h1>Comnet Digitech</h1> -->
+      </div>
+
+      
+    </div>
+     
+   </section>
+
+   <section class="hheader-part5" >
+    <h1 style="text-align:center; color: white; padding-top: 30px; padding-bottom: 0px;">Our Strengths</h1>
+        <div class="businessu">
+      <div>
+        <h1><span class="exh">30+ YEARS</span></h1>
+        <p>Established in 1987, EIG has over 30 years of being committed to excellence</p>
+      </div>
+      <div >
+        <h1><span class="exh">MANPOWER</span></h1>
+        <p>We have over 100 team members, who are multilingual, from across the nation</p>
+      </div>
+      <div >
+        <h1><span class="exh">DATABASE</span></h1>
+        <p>We have a database of 400,000+ Indian and international companies</p>
+      </div>
+      <div>
+        <h1><span class="exh">CREDIBILITY</span></h1>
+        <p>ISO 9001:2015, ISO 14001:2015 and ISO OHSAS 18001:2007 certified</p>
+      </div>
+     
+
+      
+    </div>
+
+     
+   </section>
+   <section class="hheader-part6">
+
+     <div class="hh" data-aos="fade-right">
+    <img src="https://hitex.co.in/images/construction/03.jpg">
+    </div>
+     
+   </section>
+
+   <!-- <section class="hheader-part7" >
+    <h1 style="text-align:center;">Photo <span class="exh">Gallery</span></h1>
+    <div class="row1">
+      <div class="col-sm"><img src="https://vasant.in/wp-content/uploads/2019/10/exhibition-stall.jpg"></div>
+      <div class="col-sm"><img src="https://competition.adesignaward.com/gallery/2020/LowRes/adesignaward-Exhibition-2020-2382.jpg"></div>
+      <div class="col-sm"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaPqaNdGBnks9BGDucBoV2xxLE5fzNVuu9bXlGIJ-XW81DTA1LnzXu0ANdDprG4q3bEX0&usqp=CAU"></div>
+      <div class="col-sm"><img src="https://www.falconfirst.com/images/slider/slider-5.jpg"></div>
+      <div class="col-sm"><img src="https://vasant.in/wp-content/uploads/2019/10/exhibition-stall.jpg"></div>
+      <div class="col-sm"><img src="https://vasant.in/wp-content/uploads/2019/10/exhibition-stall.jpg"></div>
+    </div>
+     <div class="row">
+      <div class="col-sm"><img src="https://vasant.in/wp-content/uploads/2019/10/exhibition-stall.jpg"></div>
+      <div class="col-sm"><img src="https://vasant.in/wp-content/uploads/2019/10/exhibition-stall.jpg"></div>
+      <div class="col-sm"><img src="https://vasant.in/wp-content/uploads/2019/10/exhibition-stall.jpg"></div>
+      <div class="col-sm"><img src="https://vasant.in/wp-content/uploads/2019/10/exhibition-stall.jpg"></div>
+      <div class="col-sm"><img src="https://vasant.in/wp-content/uploads/2019/10/exhibition-stall.jpg"></div>
+      <div class="col-sm"><img src="https://vasant.in/wp-content/uploads/2019/10/exhibition-stall.jpg"></div>
+    </div>
+     <div class="row">
+      <div class="col-sm"><img src="https://vasant.in/wp-content/uploads/2019/10/exhibition-stall.jpg"></div>
+      <div class="col-sm"><img src="https://vasant.in/wp-content/uploads/2019/10/exhibition-stall.jpg"></div>
+      <div class="col-sm"><img src="https://vasant.in/wp-content/uploads/2019/10/exhibition-stall.jpg"></div>
+      <div class="col-sm"><img src="https://vasant.in/wp-content/uploads/2019/10/exhibition-stall.jpg"></div>
+      <div class="col-sm"><img src="https://vasant.in/wp-content/uploads/2019/10/exhibition-stall.jpg"></div>
+      <div class="col-sm"><img src="https://vasant.in/wp-content/uploads/2019/10/exhibition-stall.jpg"></div>
+    </div>
+     <div class="row">
+      <div class="col-sm"><img src="https://vasant.in/wp-content/uploads/2019/10/exhibition-stall.jpg"></div>
+      <div class="col-sm"><img src="https://vasant.in/wp-content/uploads/2019/10/exhibition-stall.jpg"></div>
+      <div class="col-sm"><img src="https://vasant.in/wp-content/uploads/2019/10/exhibition-stall.jpg"></div>
+      <div class="col-sm"><img src="https://vasant.in/wp-content/uploads/2019/10/exhibition-stall.jpg"></div>
+      <div class="col-sm"><img src="https://vasant.in/wp-content/uploads/2019/10/exhibition-stall.jpg"></div>
+      <div class="col-sm"><img src="https://vasant.in/wp-content/uploads/2019/10/exhibition-stall.jpg"></div>
+    </div>
+     <div class="row">
+      <div class="col-sm"><img src="https://vasant.in/wp-content/uploads/2019/10/exhibition-stall.jpg"></div>
+      <div class="col-sm"><img src="https://vasant.in/wp-content/uploads/2019/10/exhibition-stall.jpg"></div>
+      <div class="col-sm"><img src="https://vasant.in/wp-content/uploads/2019/10/exhibition-stall.jpg"></div>
+      <div class="col-sm"><img src="https://vasant.in/wp-content/uploads/2019/10/exhibition-stall.jpg"></div>
+      <div class="col-sm"><img src="https://vasant.in/wp-content/uploads/2019/10/exhibition-stall.jpg"></div>
+      <div class="col-sm"><img src="https://vasant.in/wp-content/uploads/2019/10/exhibition-stall.jpg"></div>
+    </div>
+
+   </section> -->
+
+   <section class="lasthead">
+    <div class="ld">
+      <div class="ql">
+        <h1 style="color: white;">Quick Links</h1>
+        <ul>
+           <li><a href="">Home</a></li>
+          <li><a href="">Expos</a></li>
+          <li><a href="">Awards</a></li>
+          <li><a href="">Press</a></li>
+          <li><a href="">carrers</a></li>
+          <li><a href="">Terms & Conditions</a></li>
+          <li><a href="">Privacy policy</a></li>
+          <li><a href="">Contact us</a></li>
+        </ul>
+        
+      </div>
+      <div class="git">
+        <h1 style="color: white;">Get in Touch</h1>
+        <h2><span class="exh">Head Office</span></h2>
+        <p style="color:white;">C-103, Okhla Industrial <br> Estate Phase III, New<br> Delhi - 110 020, India</p>
+        
+      </div>
+      
+    </div>
+    <div class="mp">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448183.73907005717!2d76.81307299667618!3d28.646677259922765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e0!3m2!1sen!2sin!4v1644504880102!5m2!1sen!2sin" width="100%" height="90%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      
+    </div>
+
+     
+   </section>
+
+
+
+
+
+
+
+
+
+
+
+      <script>
+         const menuBtn = document.querySelector(".menu-icon span");
+         const searchBtn = document.querySelector(".search-icon");
+         const cancelBtn = document.querySelector(".cancel-icon");
+         const items = document.querySelector(".nav-items");
+         const form = document.querySelector("form");
+         menuBtn.onclick = ()=>{
+           items.classList.add("active");
+           menuBtn.classList.add("hide");
+           searchBtn.classList.add("hide");
+           cancelBtn.classList.add("show");
+         }
+         cancelBtn.onclick = ()=>{
+           items.classList.remove("active");
+           menuBtn.classList.remove("hide");
+           searchBtn.classList.remove("hide");
+           cancelBtn.classList.remove("show");
+           form.classList.remove("active");
+           cancelBtn.style.color = "#ff3d00";
+         }
+         searchBtn.onclick = ()=>{
+           form.classList.add("active");
+           searchBtn.classList.add("hide");
+           cancelBtn.classList.add("show");
+         }
+      </script>
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+            
+            
+            duration:1000
+
+      });
+  </script>
+  <script>
+ $(document).ready(function(){
+  $(window).scroll(function() {
+    if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+        $('#return-to-top').fadeIn(200);    // Fade in the arrow
+    } else {
+        $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+    }
+});
+$('#return-to-top').click(function() {      // When arrow is clicked
+    $('body,html').animate({
+        scrollTop : 0                       // Scroll to top of body
+    }, 500);
+});
+});
+</script> 
+
+
+   </body>
+</html>
